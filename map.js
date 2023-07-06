@@ -312,3 +312,45 @@ function maps(x){
 function maps(x){
   return x.map (num => num * 2) 
 }
+
+
+/* Задание 7:
+Уровень 7 kyu
+Make a program that filters a list of strings and returns a list with only your friends name in it.
+If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"] */
+let friends = ["Ryan", "Kieran", "Mark"];
+function friend(friends){
+  //your code here
+let myFriend = friends.filter(friends => friends.length === 4);
+return myFriend;
+}
+console.log(friend(friends));
+
+// короткое решение 
+function friend(friends){
+  return friends.filter(n => n.length === 4)
+}
+
+/*
+Задание 8
+Kyu 7
+Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+Testing: [0, 0, 0, 1] ==> 1
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 0, 1] ==> 5
+Testing: [1, 0, 0, 1] ==> 9
+ */
+let testing = [0, 0, 0, 1];
+function binary (arr){
+  result = "";
+  for(let item of arr) {
+    result += item
+  }
+  return parseInt(result, 2);
+}
+
+console.log(binary(testing));
+
+//короткое решение 
+const binaryArrayToNumber = arr => parseInt(arr.join(''), 2);

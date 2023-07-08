@@ -354,3 +354,32 @@ console.log(binary(testing));
 
 //короткое решение 
 const binaryArrayToNumber = arr => parseInt(arr.join(''), 2);
+
+
+/*
+Задание 9:
+Kyu 7
+Given a list of integers, determine whether the sum of its elements is odd or even.
+Give your answer as a string matching "odd" or "even".
+If the input array is empty consider it as: [0] (array with a zero). */
+// моё решение (не доконца решил)
+let inp1 = [0, 1, 4];
+ function oddOreven(inp1){
+  sum = 0;
+  for(i = 0; i < inp1.length; i++ ){
+    sum += inp1[i];
+  
+  }
+  console.log(sum);
+ }
+
+oddOreven(inp1);
+
+// правельное решение 
+function oddOrEven(array) {
+  return array.reduce(function(sum, item) {return sum + item }, 0) % 2 == 0 ? 'even' : 'odd';
+}
+console.log(oddOrEven([0, 1, 4]));
+console.log(oddOrEven([0, -1, -5]));
+console.log(oddOrEven([0]));
+//--------------- Конец 8 kyu (уровня) --------------------------------------

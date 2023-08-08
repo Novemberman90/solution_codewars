@@ -383,3 +383,51 @@ console.log(oddOrEven([0, 1, 4]));
 console.log(oddOrEven([0, -1, -5]));
 console.log(oddOrEven([0]));
 //--------------- Конец 8 kyu (уровня) --------------------------------------
+
+//------Повторение--------------
+
+/*
+Write a function that takes an array of words and smashes them together into a sentence and returns the sentence.
+ You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. 
+ Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+ Example
+ ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+ */
+
+ let words = ['hello', 'world', 'this', 'is', 'great'];
+
+ function smash (words) {
+  
+  return words.join(" ");
+
+};
+
+console.log(smash (words));
+
+// Супер короткое решение
+const smash = words => words.join(' ');
+
+
+//--- Повторение Ката 8 
+/*
+Can you find the needle in the haystack?
+
+Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+After your function finds the needle it should return a message (as a string) that says:
+
+"found the needle at position " plus the index it found the needle, so:
+
+Example(Input --> Output)
+["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5" 
+ */
+
+let needly = ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"];
+
+function findNeedle(haystack) {
+
+return `found the needle at position ${haystack.indexOf("needle")}`;
+}
+
+console.log(findNeedle(needly));
